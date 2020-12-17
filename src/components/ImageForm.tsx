@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ImagePreview from "./ImagePreview";
+import ImageView from "./ImageView";
 
 class ImageForm extends Component<any, any> {
   constructor(props: any) {
@@ -44,42 +46,16 @@ class ImageForm extends Component<any, any> {
       });
   }
 
-  renderPreview() {
-    if (this.state.fileUrl !== "") {
-      return (
-        <div>
-          <span>Preview</span>
-          <br></br>
-          <img src={this.state.fileUrl} width="100px" height="100px" />
-          <br></br>
-        </div>
-      );
-    }
-  }
-
-  renderProcessedImage() {
-    if (this.state.fileProcessedUrl !== "") {
-      return (
-        <div>
-          <span>Processed Image</span>
-          <br></br>
-          <img src={this.state.fileProcessedUrl} />
-          <br></br>
-        </div>
-      );
-    }
-  }
-
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <input type="file" onChange={this.handleChange} />
           <br></br>
-          {this.renderPreview()}
+          <ImagePreview fileUrl={this.state.fileUrl}></ImagePreview>
           <input type="submit" value="Submit" />
           <br></br>
-          {this.renderProcessedImage()}
+          <ImageView fileUrl={this.state.fileProcessedUrl}></ImageView>
         </form>
       </div>
     );
