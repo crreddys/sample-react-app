@@ -1,14 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ImageForm from "./components/ImageForm";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      <header>Sample Test App</header>
-      <br></br>
-      <ImageForm></ImageForm>
+      <Home></Home>
     </div>
   );
 }

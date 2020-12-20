@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ImagePreview from "./ImagePreview";
 import ImageView from "./ImageView";
 
-class ImageForm extends Component<any, any> {
+export default class ImageForm extends Component<any, any> {
   constructor(props: any) {
     super(props);
 
@@ -61,5 +61,3 @@ class ImageForm extends Component<any, any> {
     );
   }
 }
-
-export default ImageForm;
